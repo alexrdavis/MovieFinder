@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="447.0" prefWidth="745.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="moviefinder.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <TableView fx:id="tableView" layoutX="21.0" layoutY="69.0" prefHeight="310.0" prefWidth="348.0">
+        <columns>
+          <TableColumn fx:id="movieNameColumn" prefWidth="173.0" text="Movie Name" />
+          <TableColumn fx:id="shelfNumberColumn" prefWidth="172.0" text="Shelf" />
+        </columns>
+      </TableView>
+      <TableView fx:id="secondView" layoutX="380.0" layoutY="69.0" prefHeight="310.0" prefWidth="342.0">
+         <columns>
+            <TableColumn fx:id="movieNameBorrowedColumn" prefWidth="173.0" text="Movie Name" />
+            <TableColumn fx:id="shelfNumberBorrowedColumn" prefWidth="172.0" text="Shelf" />
+         </columns>
+      </TableView>
+      <TextField fx:id="searchText" layoutX="34.0" layoutY="26.0" />
+      <Button fx:id="borrowedBtn" layoutX="203.0" layoutY="26.0" mnemonicParsing="false" text="Mark Borrowed" />
+      <Button fx:id="removeBtn" layoutX="310.0" layoutY="26.0" mnemonicParsing="false" text="Remove Borrowed" />
+    </children>
+</AnchorPane>
