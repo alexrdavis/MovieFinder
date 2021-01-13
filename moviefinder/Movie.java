@@ -10,7 +10,7 @@ public class Movie {
     private SimpleStringProperty movieName;
     private SimpleStringProperty shelfNumber;
     
-    public Movie(String movieName, String shelfNumber) {
+    protected Movie(String movieName, String shelfNumber) {
         this.movieName = new SimpleStringProperty(movieName);
         this.shelfNumber = new SimpleStringProperty(shelfNumber);
     }
