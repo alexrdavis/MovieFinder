@@ -60,7 +60,7 @@ public class FXMLDocumentController implements Initializable {
     }    
     
     // This method will get list of movies from file, store in Movie object, and add to our ObservableList
-    public Movie getMovieFromFile() {
+    private Movie getMovieFromFile() {
         Movie movie = null;
         int countLine = 0;
         int maxLine = 0;
@@ -86,7 +86,7 @@ public class FXMLDocumentController implements Initializable {
     }
     
     // This method will predict search as you type and allow you to find a specific movie
-    public void searchBox() {
+    private void searchBox() {
         FilteredList<Movie> filteredData = new FilteredList<>(movieData, p -> true);
         searchText.textProperty().addListener((observable, oldValue, newValue) -> {
             filteredData.setPredicate(movie -> {
@@ -109,7 +109,7 @@ public class FXMLDocumentController implements Initializable {
     
     
     // move the movies to another table to keep track of what is borrowed
-    public void borrowedMovie() {
+    private void borrowedMovie() {
         borrowedBtn.setOnAction((ActionEvent e) -> {
             Movie selectedItem = tableView.getSelectionModel().getSelectedItem();    
             borrowedMovieData.add(selectedItem);   
@@ -120,7 +120,7 @@ public class FXMLDocumentController implements Initializable {
     
     
     // goes with borrowedMovie, method to remove after movie is returned
-    public void removeBorrowedMovie() {
+    private void removeBorrowedMovie() {
         removeBtn.setOnAction((ActionEvent e) -> {
             Movie selectedItem = secondView.getSelectionModel().getSelectedItem();
             borrowedMovieData.remove(selectedItem);
